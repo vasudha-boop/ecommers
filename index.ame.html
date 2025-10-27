@@ -1,0 +1,70 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudOps on Amazon E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>☁️ CloudOps on Amazon E-Commerce</h1>
+    <nav>
+      <button id="loginBtn">Login</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+      <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <section id="authSection">
+    <h2>Sign Up / Login</h2>
+    <input type="text" id="username" placeholder="Enter username" />
+    <input type="password" id="password" placeholder="Enter password" />
+    <button id="signup">Sign Up</button>
+    <button id="login">Login</button>
+    <p id="authMessage"></p>
+  </section>
+
+  <section id="products" style="display:none;">
+    <h2>Amazon Cloud Products</h2>
+    <div class="product-grid">
+      <div class="card">
+        <h3>Amazon S3 Storage</h3>
+        <p>$5 / month</p>
+        <button onclick="addToCart('Amazon S3 Storage', 5)">Add to Cart</button>
+      </div>
+      <div class="card">
+        <h3>EC2 Compute Instance</h3>
+        <p>$10 / hour</p>
+        <button onclick="addToCart('EC2 Compute Instance', 10)">Add to Cart</button>
+      </div>
+      <div class="card">
+        <h3>RDS Database Hosting</h3>
+        <p>$15 / month</p>
+        <button onclick="addToCart('RDS Database Hosting', 15)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cartSection" style="display:none;">
+    <h2>Your Cart</h2>
+    <ul id="cartList"></ul>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button id="checkoutBtn">Proceed to Payment</button>
+  </section>
+
+  <section id="paymentSection" style="display:none;">
+    <h2>Payment</h2>
+    <p>Simulated Payment Gateway</p>
+    <button id="payNowBtn">Pay Now</button>
+    <p id="paymentMessage"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 CloudOps on Amazon E-Commerce | Deployed on GitHub Pages | Managed by CloudOps</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
